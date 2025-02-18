@@ -33,5 +33,27 @@ a=10
 b=20
 print(a | b)
 
+'''
+basic problems on operators
+
+python program to take 2 numbers from user as input and check if both numbers are greater than 10(using and)
+at lest one of the numbers is less than 5(using or)
+the first number is not greater than the second
+'''
+a=int(input("enter a number: "))
+b=int(input("Enter b number: "))
+print("value of a is :",int( a))
+print("value of b is: ",int( b))
+c=  a and b
+
+
+print(c>10) # for first question
+
+c= a or b
+print(c<5) # for second question
+
+if((a) <(b)): #for thied question
+    print("the first number is not greater than second number ")
+
 
 
