@@ -26,3 +26,12 @@ print(genders.count("Male")) # Output 1
 
 # index used to access index value
 print(genders.index("Male"))# Output 0
+
+#HOMEWORK ON TUPLES
+tup=(1,2,3,4,5) # tuple with 5 elements
+t2=(2,2,3,4) # tuple with 4 elements
+print(tup)
+print(tup [1]) #indexing tuple values
+print(tup [3])
+print(tup[1:5:2]) #slicing tuple
+print(tup+t2) # concatinating 2 tuple
