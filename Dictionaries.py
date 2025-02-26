@@ -62,4 +62,4 @@ item2={
     "weight":3,
     "prise":30
 }
-print(f"total weight is: {item1["weight"]+item2["weight"]} kg")
+print(f"total weight is: {item1["weight"]+item2["weight"]} kg") # output :total weight is: 4 kg
