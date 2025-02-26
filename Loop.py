@@ -46,4 +46,21 @@ while trials<3:
         else:
             print("incorrect")
         
+# Real world prooblem using loop bus ticket problem 
+bus_seats=8
+booked_seat=int(input("Enter number of seats to be booked : "))
+while True:
+    print("seats are booked successfully")
+    bus_seats-=booked_seat
+    print("remaining seats are:",bus_seats)
+    break
+while(bus_seats!=0):
+    booked_seat=int(input("Enter number of seats to be booked : "))
+    if(booked_seat <= bus_seats):
+        print("seat booked")
+        bus_seats-=booked_seat
+        print("remaining seats : ",bus_seats)
+    if(bus_seats == 0):
+        print("seats are full")
+
     
