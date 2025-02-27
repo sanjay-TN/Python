@@ -63,4 +63,97 @@ while(bus_seats!=0):
     if(bus_seats == 0):
         print("seats are full")
 
+''' 
+FOR  loop: it is used to iterate over a squence (lits,tuple,string,range) and execute a block of code repeatedly for each element in the sequence.
+structure of for loop
+SYNTAX
+for item in sequence:
+    code to execute for each item in sequence
+'''
+cities=["banglore","mysore","anavatti","shimoga"]
+for city in cities:
+    print(city)
+
+bag=["red","green","blue"]
+for ball in bag:
+    print(ball)
+
+
+#for loop using range(start,stop,step)
+for i in range(1,11):
+    print(i)
     
+
+for i in range(1,11,2):
+    print(i,end=" ")
+print("\n")
+
+
+#looping over strings
+name="SANJAY"
+for letter in name:
+    print(letter*2)
+
+# To print string in form of its position numbers 
+name="SANJAY"
+n=1
+for letter in name:
+    print(letter*n)
+    n+=1
+
+# Output
+'''
+S
+AA
+NNN
+JJJJ
+AAAAA
+YYYYYY 
+'''
+# using break in for loop
+'''
+the break statement is used to exit a loop early when a cretain condition met.
+'''
+cities=["banglore","mysore","anavatti","shimoga"]
+for city in cities:
+    print(city)
+    break
+
+
+#using continue statement in for loop 
+
+cities=["banglore","mysore","anavatti","shimoga"]
+for city in cities:
+    print(city)
+    continue
+
+#using enumerate() in for loop
+cities=["banglore","mysore","anavatti","shimoga"]
+for index,city in enumerate(cities):
+    print(f"city {index +1}: {city}")
+
+
+# using else in for loop
+for i in range(1,11):
+    print(i)
+else:
+    print("ALL PRINTED")
+
+# for loop usinf dictionary
+d={"name":"sanjay",
+   "age":22}
+print(d.items)
+for key,value in d.items():
+    print(key," ",value)
+
+# nested loops
+# 2*1=2
+i=2
+for n in range(1,11):
+    print(f"2x{n}={i*n}")
+
+##
+for i in range(2,11):
+    for j in range(1,11):
+        print(i,"x",j,"=",i*j)
+
