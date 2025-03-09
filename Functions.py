@@ -52,3 +52,77 @@ def add_numbers(a,b):
     return a+b
 result=add_numbers(5,3)
 print(f"the sum of two numbers is : {result}")
+
+# vriable length arguments
+def add(a,b): # parameters used in function
+    return a+b
+c=add(1,2)  # arguments
+print(c)
+
+# we use * to add variable length-arguments. Example is given below.
+#You can use *args and **kwargs to accept a variable number of arguments in a function.
+def num(*n):
+    return sum(n)
+print(num(1,2,3,4,100))
+
+#Example: Using **key word args
+def details(**student):
+    for key,value in student.items():
+        print(f"{key}:{value}")
+details(name="sanjay",age=22,course="Python")
+
+# Lambda function
+#A lambda function is a small anonymous function that can take any number of arguments but has only one expression.
+# Syntax : lambda arguments: expression
+
+add=lambda a,b: a+b
+print(add(1,2))
+
+# Recursion : Recursion occurs when a function calls itself. It's used to solve problems that can be broken down into smaller, similar problems.
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n*factorial(n-1)
+print(factorial(5))
+
+# nested functions
+# a function inside the function is called nested function,The inner function is only accessible within the outer function, allowing for more modular and controlled code execution.
+
+def outer_calculate(a,b): # outer function
+    def inner_add():      # inner function
+        print(a+b)
+    def inner_sub():      # inner function
+        print(a-b)
+    def inner_mul():      # inner function
+        print(a*b)
+    inner_add()
+    inner_sub()
+    inner_mul()
+outer_calculate(5,2)
+
+
+# example problems Lambda Function: Write a lambda function that multiplies two numbers.
+
+mutiply = lambda a,b : a*b
+print(mutiply(5,4))
+
+#Recursive Function: Write a recursive function that calculates the sum of the first n numbers.
+
+def sum(n):
+    if n == 1:
+        return 1
+    return n+sum(n-1)
+print(sum(5))
+
+#Variable-Length Arguments: Write a function that accepts any number of arguments and returns their average.
+def calculate_average(*args):
+    total = sum(args)
+    count = len(args)
+    average = total / count if count != 0 else 0
+    return average
+
+# Example usage
+numbers =10, 20, 30, 40, 50
+average = calculate_average(*numbers)
+print(f"The average is: {average}")
