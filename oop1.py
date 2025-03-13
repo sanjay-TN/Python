@@ -1,5 +1,9 @@
 # oop stands for object oriented programming language
 # example programs
+# __init__() constructor :- the init method in python is used to access an object when it is created.it is called autometically when you create a new instance of class.
+# purpose: it allows you to set the initial state of the object by defining its attributes.
+# self: referes to  instance of the class itself,allowing to access attributes and methods within a class.
+# it is automatically passed as the first argument to methods within the class.
 class Human:
     def __init__(self,name):
         self.name=name
@@ -40,3 +44,18 @@ sujay = student("sujay",50)
 
 sanjay.display_info()
 sujay.display_info()
+
+    
+class Movie:
+    def __init__(self,title,rating):
+        self.title=title
+        self.rating=rating
+    
+    def display(self):
+        print(f"{self.title} is a movie having ")
+        print(f"{self.rating} ratings")
+
+k = Movie("Kantara",10)
+b = Movie("Hridyam",10)
+k.display()
+b.display()
