@@ -59,3 +59,48 @@ k = Movie("Kantara",10)
 b = Movie("Hridyam",10)
 k.display()
 b.display()
+
+# pillers of oop are abstraction,encapsulation,inheritance,polymorphism
+# abstraction:- hiding the inner data showing only required data for the user
+
+class atm:
+    def __init__(self,balance):
+        self.__balance=balance #private attribute
+        print("current balance is :",self.__balance)
+
+    def deposit(self,amount):
+        self.__balance+=amount
+        print(f"Deposited {amount}. new balance :{self.__balance}")
+
+    def withdraw(self,amount):
+        if amount <= self.__balance:
+            self.__balance-=amount
+            print(f"Withdraw {amount}. new balance :{self.__balance}")
+
+        else:
+            print(f"Insufficient balance, you have only {self.__balance} rupees left")
+
+atm=atm(1000)
+atm.deposit(500)
+atm.withdraw(10000)
+
+# encapsulation:- it is the wrpping of data and methods that operate on data with one calss.This protects the data from exteral interfaces and misuse,improve security and maintainability. It mailny uses private access modifier i.e(self.__vaiable)
+
+class Database:
+    def __init__(self):
+        self.__storage={}
+
+    def write(self, key, value):
+        self.__storage[key] = value
+
+    def read(self,key):
+        if key in self.__storage:
+            return self.__storage[key]
+        else:
+            print("DB item not available")
+    
+db=Database()
+db.write("name", "sanjay")
+db.write("name1", "sanj")
+db.write("name2", "sujay")
+print(db.read("name2"))
