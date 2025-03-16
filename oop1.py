@@ -104,3 +104,45 @@ db.write("name", "sanjay")
 db.write("name1", "sanj")
 db.write("name2", "sujay")
 print(db.read("name2"))
+
+# Inheritance
+ # Definition: Inheritance allows a class to inherit attributes and methods from another class, facilitating reuse.
+
+class User:
+    def __init__(self, username):
+        self.username = username
+
+    def login(self):
+        print(f"{self.username} logged in")
+
+class Admin(User):
+    def delete_user(self, user):
+        print(f"Admin {self.username} deleted user {user}")
+
+admin = Admin("karnataka_admin")
+admin.login()  # Inherited from User
+admin.delete_user("user_102")  # Admin-specific method
+# Here, Admin inherits from User and gains additional functionality.
+
+
+# Polymorphism
+# Definition: Polymorphism allows objects of different classes to be treated as objects of a common superclass, but they can behave differently depending on the object type.
+
+class Notification:
+    def send(self):
+        pass
+
+class EmailNotification(Notification):
+    def send(self):
+        print("Sending Email")
+
+class SMSNotification(Notification):
+    def send(self):
+        print("Sending SMS")
+
+notifications = [EmailNotification(), SMSNotification()]
+for notification in notifications:
+    notification.send()
+
+# Each notification type behaves differently while sharing a common interface.
+
